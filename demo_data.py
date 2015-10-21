@@ -1,0 +1,77 @@
+# coding: utf-8
+from schema import *
+from db_url import *
+import datetime
+from sqlalchemy import create_engine
+the_bind = create_engine(two)
+from sqlalchemy.orm import Session
+s = Session(the_bind)
+
+# p = Project()
+# p.name = "Development"
+# p.description = "Tasks for the dev team"
+
+# p2 = Project()
+# p2.name = "Testing"
+# p2.description = "Tests tasks"
+
+# p3 = Project()
+# p3.name = "Cooking"
+# p3.description = "What should we eat this week?"
+
+# s.add(p)
+# s.add(p2)
+# s.add(p3)
+# s.commit()
+# s.refresh(p)
+# s.refresh(p2)
+# s.refresh(p3)
+
+# i = Item()
+# i.projectId = p.projectId
+# i.priority = 4
+# i.title = "Do the code"
+# i.description = "ALANJKAHSDJAHSJKDH Ƣ\nƢƢƢƢ"
+# s.add(i)
+
+# i2 = Item()
+# i2.projectId = p2.projectId
+# i2.title = "TESTSTSTSTSTSTESTTEST"
+# i2.description = "Ĉ ĉ Ċ ċ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEND"
+# s.add(i2)
+
+# i3 = Item()
+# i3.projectId = p3.projectId
+# i3.title = "Find a delicious recipe"
+# i3.description = "FInd a delicious recipe and <strong>coooook</strong> it"
+# s.add(i3)
+
+# s.commit()
+
+# m = Member()
+# m.username = "Mike the Mechanic"
+# s.add(m)
+
+# m2 = Member()
+# m2.username = "Joe Jackson"
+# s.add(m2)
+
+# s.commit()
+
+s1 = ItemStatus()
+s1.itemId = 1
+s1.statusDate = datetime.datetime.today()
+s1.statusKey = 2
+s1.memberId = 1
+
+s.add(s1)
+s.commit()
+
+s2 = ItemStatus()
+s2.itemId = 2
+s2.statusDate = datetime.datetime.today()
+s2.statusKey = 3
+s2.memberId = 1
+
+s.add(s2)
+s.commit()
