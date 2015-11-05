@@ -11,92 +11,92 @@ metadata = Base.metadata
 class Item(Base):
     __tablename__ = 'item'
 
-    itemId = Column(Integer, primary_key=True)
-    projectId = Column(Integer, index=True)
-    itemParentId = Column(Integer, )
+    id = Column(Integer, primary_key=True)
+    projectid = Column(Integer, index=True)
+    itemparentid = Column(Integer, )
     priority = Column(Integer, )
     context = Column(String(80), )
     title = Column(String(80), )
     description = Column(String(700), )
-    deadlineDate = Column(Date, )
-    memberId = Column(Integer, index=True)
-    authorId = Column(Integer, )
+    deadlinedate = Column(Date, )
+    memberid = Column(Integer, index=True)
+    authorid = Column(Integer, )
 
 
 class ItemComment(Base):
-    __tablename__ = 'itemComment'
+    __tablename__ = 'itemcomment'
 
-    itemCommentId = Column(BigInteger, primary_key=True)
-    itemId = Column(Integer, index=True)
-    memberId = Column(Integer, )
-    postDate = Column(DateTime, )
+    itemcommentid = Column(BigInteger, primary_key=True)
+    itemid = Column(Integer, index=True)
+    memberid = Column(Integer, )
+    postdate = Column(DateTime, )
     body = Column(String(400), )
-    lastChangeDate = Column(DateTime, )
+    lastchangedate = Column(DateTime, )
 
 
 class ItemStatus(Base):
-    __tablename__ = 'itemStatus'
+    __tablename__ = 'itemstatus'
 
-    itemStatusId = Column(BigInteger, primary_key=True)
-    itemId = Column(Integer, index=True)
-    statusDate = Column(DateTime, )
-    statusKey = Column(Integer, )
-    memberId = Column(Integer, )
+    itemstatusid = Column(BigInteger, primary_key=True)
+    itemid = Column(Integer, index=True)
+    statusdate = Column(DateTime, )
+    statuskey = Column(Integer, )
+    memberid = Column(Integer, )
 
 
 class Member(Base):
     __tablename__ = 'member'
 
-    memberId = Column(Integer, primary_key=True)
+    memberid = Column(Integer, primary_key=True)
     email = Column(String(120), )
     title = Column(String(20), )
-    firstName = Column(String(50), )
-    lastName = Column(String(50), )
+    firstname = Column(String(50), )
+    lastname = Column(String(50), )
     city = Column(String(60), )
-    countryId = Column(String(2), )
+    countryid = Column(String(2), )
     phone = Column(String(30), )
     username = Column(String(20), index=True)
     password = Column(String(60), )
     salt = Column(String(8), )
-    autoLogin = Column(Integer, )
-    timeZone = Column(SmallInteger, )
-    expirationDate = Column(DateTime, )
-    lastLoginDate = Column(DateTime, )
-    lastLoginAddress = Column(String(60), )
-    creationDate = Column(DateTime, )
-    lastChangeDate = Column(DateTime, )
+    autologin = Column(Integer, )
+    timezone = Column(SmallInteger, )
+    expirationdate = Column(DateTime, )
+    lastlogindate = Column(DateTime, )
+    lastloginaddress = Column(String(60), )
+    creationdate = Column(DateTime, )
+    lastchangedate = Column(DateTime, )
     visits = Column(Integer, )
-    badAccess = Column(Integer, )
+    badaccess = Column(Integer, )
     level = Column(Integer, )
     activation = Column(String(16), )
-    authorId = Column(Integer, )
+    authorid = Column(Integer, )
     enabled = Column(Integer, )
 
 
 class MemberProject(Base):
-    __tablename__ = 'memberProject'
+    __tablename__ = 'memberproject'
 
-    memberId = Column(Integer, primary_key=True, )
-    projectId = Column(Integer, primary_key=True, )
+    memberid = Column(Integer, primary_key=True, )
+    projectid = Column(Integer, primary_key=True, )
     position = Column(Integer, )
 
 
 class Project(Base):
     __tablename__ = 'project'
 
-    projectId = Column(Integer, primary_key=True)
+    projectid = Column(Integer, primary_key=True)
     name = Column(String(120), )
     description = Column(String, )
 
 
 class ProjectStatus(Base):
-    __tablename__ = 'projectStatus'
+    __tablename__ = 'projectstatus'
 
-    projectStatusId = Column(Integer, primary_key=True)
-    projectId = Column(Integer, index=True)
-    statusDate = Column(DateTime, )
-    statusKey = Column(Integer, )
-    memberId = Column(Integer, )
+    projectstatusid = Column(Integer, primary_key=True)
+    projectid = Column(Integer, index=True)
+    statusdate = Column(DateTime, )
+    statuskey = Column(Integer, )
+    memberid = Column(Integer, )
 
 from db_url import *
 from sqlalchemy import create_engine
