@@ -1,5 +1,5 @@
 # coding: utf-8
-from sqlalchemy import BigInteger, Column, Date, DateTime, Integer, SmallInteger, String, text
+from sqlalchemy import BigInteger, Column, DateTime, Integer, SmallInteger, String, text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql import func
 
@@ -18,7 +18,7 @@ class Item(Base):
     context = Column(String(80), )
     title = Column(String(80), )
     description = Column(String(700), )
-    deadlinedate = Column(Date, )
+    deadlinedate = Column(DateTime(timezone=True), )
     memberid = Column(Integer, index=True)
     authorid = Column(Integer, )
 
