@@ -32,6 +32,7 @@ i.projectid = p.projectid
 i.priority = 4
 i.title = "Do the code"
 i.description = "ALANJKAHSDJAHSJKDH Ƣ\nƢƢƢƢ"
+i.deadlinedate = datetime.date.utcnow()
 s.add(i)
 
 i2 = Item()
@@ -79,7 +80,7 @@ s.commit()
 c7 = ItemComment()
 c7.itemid = 1
 c7.body = "Comment via SQLAlchemy"
-c7.postdate = datetime.date.today()
+c7.postdate = datetime.date.utcnow()
 c7.memberid = 1
 
 s.add(c7)
