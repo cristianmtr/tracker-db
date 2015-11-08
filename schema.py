@@ -29,9 +29,9 @@ class ItemComment(Base):
     itemcommentid = Column(BigInteger, primary_key=True)
     itemid = Column(Integer, index=True)
     memberid = Column(Integer, )
-    postdate = Column(DateTime, )
+    postdate = Column(DateTime(timezone=True), )
     body = Column(String(400), )
-    lastchangedate = Column(DateTime, )
+    lastchangedate = Column(DateTime(timezone=True), )
 
 
 class ItemStatus(Base):
@@ -39,7 +39,7 @@ class ItemStatus(Base):
 
     itemstatusid = Column(BigInteger, primary_key=True)
     itemid = Column(Integer, index=True)
-    statusdate = Column(DateTime, )
+    statusdate = Column(DateTime(timezone=True), )
     statuskey = Column(Integer, )
     memberid = Column(Integer, )
 
@@ -60,11 +60,11 @@ class Member(Base):
     salt = Column(String(8), )
     autologin = Column(Integer, )
     timezone = Column(SmallInteger, )
-    expirationdate = Column(DateTime, )
-    lastlogindate = Column(DateTime, )
+    expirationdate = Column(DateTime(timezone=True), )
+    lastlogindate = Column(DateTime(timezone=True), )
     lastloginaddress = Column(String(60), )
-    creationdate = Column(DateTime, )
-    lastchangedate = Column(DateTime, )
+    creationdate = Column(DateTime(timezone=True), )
+    lastchangedate = Column(DateTime(timezone=True), )
     visits = Column(Integer, )
     badaccess = Column(Integer, )
     level = Column(Integer, )
@@ -94,7 +94,7 @@ class ProjectStatus(Base):
 
     projectstatusid = Column(Integer, primary_key=True)
     projectid = Column(Integer, index=True)
-    statusdate = Column(DateTime, )
+    statusdate = Column(DateTime(timezone=True), )
     statuskey = Column(Integer, )
     memberid = Column(Integer, )
 
