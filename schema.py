@@ -1,7 +1,6 @@
 # coding: utf-8
-from sqlalchemy import BigInteger, Column, DateTime, Integer, SmallInteger, String, text
+from sqlalchemy import BigInteger, Column, DateTime, Integer, SmallInteger, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.sql import func
 
 
 Base = declarative_base()
@@ -49,7 +48,6 @@ class Member(Base):
 
     memberid = Column(Integer, primary_key=True)
     email = Column(String(120), )
-    title = Column(String(20), )
     firstname = Column(String(50), )
     lastname = Column(String(50), )
     city = Column(String(60), )
@@ -67,7 +65,6 @@ class Member(Base):
     lastchangedate = Column(DateTime(timezone=True), )
     visits = Column(Integer, )
     badaccess = Column(Integer, )
-    level = Column(Integer, )
     activation = Column(String(16), )
     authorid = Column(Integer, )
     enabled = Column(Integer, )
