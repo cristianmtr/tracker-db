@@ -1,5 +1,5 @@
 # coding: utf-8
-from sqlalchemy import BigInteger, Column, DateTime, Integer, SmallInteger, String
+from sqlalchemy import BigInteger, Column, DateTime, Integer, SmallInteger, String, Text
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -54,8 +54,7 @@ class Member(Base):
     countryid = Column(String(2), )
     phone = Column(String(30), )
     username = Column(String(20), index=True)
-    password = Column(String(60), )
-    salt = Column(String(8), )
+    password = Column(Text)
     autologin = Column(Integer, )
     timezone = Column(SmallInteger, )
     expirationdate = Column(DateTime(timezone=True), )
