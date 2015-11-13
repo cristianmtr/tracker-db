@@ -1,5 +1,5 @@
 # coding: utf-8
-from sqlalchemy import BigInteger, Column, DateTime, Integer, SmallInteger, String, Text
+from sqlalchemy import BigInteger, Column, DateTime, Integer, SmallInteger, String, Text, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -67,6 +67,7 @@ class Member(Base):
     activation = Column(String(16), )
     authorid = Column(Integer, )
     enabled = Column(Integer, )
+    admin = Column(Boolean)
 
 
 class MemberProject(Base):
