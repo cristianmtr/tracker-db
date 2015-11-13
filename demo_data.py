@@ -85,3 +85,11 @@ c7.memberid = 1
 
 s.add(c7)
 s.commit()
+
+cristian = Member()
+cristian.username = "cristian"
+cristian.admin = True
+s.add(cristian)
+s.commit()
+s.refresh(cristian)
+print cristian.memberid
