@@ -92,4 +92,27 @@ cristian.admin = True
 s.add(cristian)
 s.commit()
 s.refresh(cristian)
-print cristian.memberid
+
+mp = MemberProject()
+mp.memberid = cristian.memberid
+mp.projectid = p.projectid
+mp.position = 3
+
+s.add(mp)
+s.commit()
+
+mp = MemberProject()
+mp.memberid = cristian.memberid
+mp.projectid = p3.projectid
+mp.position = 3
+
+s.add(mp)
+s.commit()
+
+mp = MemberProject()
+mp.memberid = cristian.memberid
+mp.projectid = p2.projectid
+mp.position = 3
+
+s.add(mp)
+s.commit()
