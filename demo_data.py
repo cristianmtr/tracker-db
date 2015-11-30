@@ -51,10 +51,12 @@ s.commit()
 
 m = Member()
 m.username = "Mike the Mechanic"
+m.admin = False
 s.add(m)
 
 m2 = Member()
 m2.username = "Joe Jackson"
+m2.admin = False
 s.add(m2)
 
 s.commit()
