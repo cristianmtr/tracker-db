@@ -91,6 +91,7 @@ s.commit()
 cristian = Member()
 cristian.username = "cristian"
 cristian.admin = True
+cristian.password = "$2a$10$5zHbtwzaLDFI.k7RkNpn5ugGwNUnxcUnzTMBCMwDEYL8710ax7qse" # "cristian" hashed with BCrypt
 s.add(cristian)
 s.commit()
 s.refresh(cristian)
