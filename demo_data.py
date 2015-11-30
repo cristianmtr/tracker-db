@@ -98,7 +98,7 @@ s.refresh(cristian)
 mp = MemberProject()
 mp.memberid = cristian.memberid
 mp.projectid = p.projectid
-mp.position = 3
+mp.position = 1
 
 s.add(mp)
 s.commit()
@@ -106,7 +106,7 @@ s.commit()
 mp = MemberProject()
 mp.memberid = cristian.memberid
 mp.projectid = p3.projectid
-mp.position = 3
+mp.position = 2
 
 s.add(mp)
 s.commit()
